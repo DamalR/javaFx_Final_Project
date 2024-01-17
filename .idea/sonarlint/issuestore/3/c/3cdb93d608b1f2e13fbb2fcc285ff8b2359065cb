@@ -1,0 +1,48 @@
+
+h	java:S112´"FDefine and throw a dedicated exception instead of using a generic one.(«±ôÍøÿÿÿÿ8¥»·Ñ1
+h	java:S112¶"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¨»·Ñ1
+L
+java:S3740a"/Provide the parametrized type for this generic.( ç¡ã8ª»·Ñ1
+Q
+java:S3740d"/Provide the parametrized type for this generic.(ºšãÿıÿÿÿÿ8«»·Ñ1
+L
+java:S3740g"/Provide the parametrized type for this generic.(Œà•®8¬»·Ñ1
+Q
+java:S3740j"/Provide the parametrized type for this generic.(á¹ŸŒÿÿÿÿÿ8­»·Ñ1
+Q
+java:S3740m"/Provide the parametrized type for this generic.(”Ú£öÿÿÿÿÿ8®»·Ñ1
+L
+java:S3740p"/Provide the parametrized type for this generic.(´÷¸ 8°»·Ñ1
+‚
+java:S1104"`Make txtFieldEmployeeIdT2 a static final constant or non-public and provide accessors if needed.(ìª»Œüÿÿÿÿ8²»·Ñ1
+¤
+java:S1186Ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(²Ñ¤·ùÿÿÿÿ8ñ»·Ñ1
+
+java:S1186â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ç¸ÍP8ò»·Ñ1
+Ÿ
+java:S1186æ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô¢²¡8ò»·Ñ1
+Ÿ
+java:S1186ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†›†ò8ò»·Ñ1
+¤
+java:S1186î"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ß‡ğíşÿÿÿÿ8ò»·Ñ1
+¤
+java:S1186ò"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö´ñıÿÿÿÿ8ò»·Ñ1
+J
+java:S1602’",Remove useless curly braces around statement(±‡´8û»·Ñ1
+Y	java:S125™"<This block of commented-out lines of code should be removed.(”¹“û8ı»·Ñ1
+U
+java:S1172É"2Remove this unused method parameter "actionEvent".(ŒÓçşÿÿÿÿ8„»·Ñ1
+j	java:S100â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¸ÍP8†»·Ñ1
+Y	java:S125ö"<This block of commented-out lines of code should be removed.(Ä‘µô8ù•ˆ¸Ñ1
+R
+java:S1128"5Remove this unused import 'bo.custom.ItemCategoryBo'.(÷øš»8ú•ˆ¸Ñ1
+M
+java:S1128"0Remove this unused import 'dto.ItemCategoryDto'.(Ó·ÉÙ8ú•ˆ¸Ñ1
+J
+java:S1128	"(Remove this unused import 'dto.ItemDto'.(‚Æ‘ıÿÿÿÿ8ú•ˆ¸Ñ1
+G
+java:S1128"*Remove this unused import 'dto.tm.ItemTm'.( ƒúš8ú•ˆ¸Ñ1
+M
+java:S1128"+Remove this unused import 'dto.tm.ItemTm2'.(áÓ¿ßüÿÿÿÿ8ú•ˆ¸Ñ1
+T
+java:S1128"7Remove this unused import 'java.awt.event.ActionEvent'.(Úù“‘8ú•ˆ¸Ñ1

@@ -1,0 +1,99 @@
+
+h	java:S112š"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ï¸Š’Ñ1
+L
+java:S3740!"/Provide the parametrized type for this generic.(ì¬ƒ8ï¸Š’Ñ1
+Q
+java:S3740""/Provide the parametrized type for this generic.(ÊÚÎ¨ùÿÿÿÿ8ï¸Š’Ñ1
+L
+java:S3740#"/Provide the parametrized type for this generic.(Å½«œ8ï¸Š’Ñ1
+L
+java:S3740$"/Provide the parametrized type for this generic.(ƒäÆ8ï¸Š’Ñ1
+L
+java:S3740%"/Provide the parametrized type for this generic.(¯ÿı°8ï¸Š’Ñ1
+K
+java:S3740&"/Provide the parametrized type for this generic.(ÃíD8ï¸Š’Ñ1
+|
+java:S1104"ZMake tabAddCustomer a static final constant or non-public and provide accessors if needed.(ÃÕóñúÿÿÿÿ8ğ¸Š’Ñ1
+s
+java:S1104"VMake txtAddress a static final constant or non-public and provide accessors if needed.(¾ø¼8ğ¸Š’Ñ1
+~
+java:S1104"\Make txtContactNumber a static final constant or non-public and provide accessors if needed.(˜¸„Ïøÿÿÿÿ8ğ¸Š’Ñ1
+v
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(õÍ¤šûÿÿÿÿ8ğ¸Š’Ñ1
+v
+java:S1104"YMake txtCustomerId a static final constant or non-public and provide accessors if needed.(Öä÷8ğ¸Š’Ñ1
+{
+java:S1104"YMake txtFieldEmail a static final constant or non-public and provide accessors if needed.(Õüßıÿÿÿÿ8ğ¸Š’Ñ1
+x
+java:S1104"[Make txtFiledAddress a static final constant or non-public and provide accessors if needed.(éˆ‡­8ğ¸Š’Ñ1
+y
+java:S1104 "]Make tabUpdateCustomer a static final constant or non-public and provide accessors if needed.(ºÜ¶58ğ¸Š’Ñ1
+v
+java:S1104!"YMake colCustomerId a static final constant or non-public and provide accessors if needed.(ì¬ƒ8ğ¸Š’Ñ1
+u
+java:S1104""SMake colName a static final constant or non-public and provide accessors if needed.(ÊÚÎ¨ùÿÿÿÿ8ğ¸Š’Ñ1
+y
+java:S1104#"\Make colContactNumber a static final constant or non-public and provide accessors if needed.(Å½«œ8ğ¸Š’Ñ1
+q
+java:S1104$"TMake colEmail a static final constant or non-public and provide accessors if needed.(ƒäÆ8ğ¸Š’Ñ1
+s
+java:S1104%"VMake colAddress a static final constant or non-public and provide accessors if needed.(¯ÿı°8ğ¸Š’Ñ1
+q
+java:S1104&"UMake colDelete a static final constant or non-public and provide accessors if needed.(ÃíD8ğ¸Š’Ñ1
+
+java:S1104'"_Make txtSearchCustomerT2 a static final constant or non-public and provide accessors if needed.( ¢–ƒÿÿÿÿÿ8ğ¸Š’Ñ1
+
+java:S1104("dMake txtFieldSearchCustomerT2 a static final constant or non-public and provide accessors if needed.(‘ø„Ò8ğ¸Š’Ñ1
+|
+java:S1104)"_Make btnSearchCustomerT2 a static final constant or non-public and provide accessors if needed.(ª¬ê8ğ¸Š’Ñ1
+r
+java:S1104*"PMake pane a static final constant or non-public and provide accessors if needed.(ÃéÇ¶ûÿÿÿÿ8İÚ¦±Ñ1
+¤
+java:S1186Â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯”ş‹üÿÿÿÿ8û¸Š’Ñ1
+Ÿ
+java:S1186Ç"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ˆÓ¦ö8û¸Š’Ñ1
+Ÿ
+java:S1186Ì"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ê—ÙÀ8û¸Š’Ñ1
+
+java:S1186Ñ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŸÜµz8û¸Š’Ñ1
+¤
+java:S1186Ö"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö‹ôÄùÿÿÿÿ8û¸Š’Ñ1
+¤
+java:S1186Û"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒ±âÊûÿÿÿÿ8û¸Š’Ñ1
+Ÿ
+java:S1186à"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øÕË8û¸Š’Ñ1
+Ÿ
+java:S1186å"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(óİ’Î8û¸Š’Ñ1
+¤
+java:S1186ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ıüıÿÿÿÿ8û¸Š’Ñ1
+Ÿ
+java:S1186ï"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ç“ß¸8û¸Š’Ñ1
+¤
+java:S1186ö"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(²Ñ¤·ùÿÿÿÿ8û¸Š’Ñ1
+
+java:S1186ú"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ç¸ÍP8û¸Š’Ñ1
+Ÿ
+java:S1186ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô¢²¡8û¸Š’Ñ1
+Ÿ
+java:S1186‚"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†›†ò8û¸Š’Ñ1
+¤
+java:S1186†"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ß‡ğíşÿÿÿÿ8û¸Š’Ñ1
+¤
+java:S1186Š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö´ñıÿÿÿÿ8û¸Š’Ñ1
+Ÿ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´¬Ìà8û¸Š’Ñ1
+Ÿ
+java:S1186Ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(óªÖ³8û¸Š’Ñ1
+¤
+java:S1186£"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ëÔäèùÿÿÿÿ8û¸Š’Ñ1
+¤
+java:S1186§"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎÎ¥±ùÿÿÿÿ8û¸Š’Ñ1
+Ÿ
+java:S1186«"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æ…¯®8û¸Š’Ñ1
+p	java:S100Â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯”ş‹üÿÿÿÿ8ı¸Š’Ñ1
+j	java:S100ú"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¸ÍP8ş¸Š’Ñ1
+O
+java:S1172’"2Remove this unused method parameter "actionEvent".(Ğõ%8ÿ¸Š’Ñ1
+k	java:S100«"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ…¯®8ˆ¹Š’Ñ1
+M
+java:S1128"0Remove this unused import 'javafx.scene.Parent'.(²ä¡È8ãŠ’Ñ1

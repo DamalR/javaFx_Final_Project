@@ -1,0 +1,61 @@
+
+h	java:S112á"FDefine and throw a dedicated exception instead of using a generic one.(«±ôÍøÿÿÿÿ8Í¦Ì¶Ñ1
+h	java:S112ã"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ñ¦Ş¶Ñ1
+Q
+java:S3740&"/Provide the parametrized type for this generic.(ƒ³òïúÿÿÿÿ8Í¦Ì¶Ñ1
+Q
+java:S3740^"/Provide the parametrized type for this generic.(èßºıÿÿÿÿ8Í¦Ì¶Ñ1
+L
+java:S3740a"/Provide the parametrized type for this generic.(Œà•®8Í¦Ì¶Ñ1
+Q
+java:S3740d"/Provide the parametrized type for this generic.(İ´Êÿÿÿÿÿ8Í¦Ì¶Ñ1
+Q
+java:S3740g"/Provide the parametrized type for this generic.(”Ú£öÿÿÿÿÿ8Í¦Ì¶Ñ1
+L
+java:S3740j"/Provide the parametrized type for this generic.(´°æ¸8Í¦Ì¶Ñ1
+L
+java:S3740m"/Provide the parametrized type for this generic.(´÷¸ 8Í¦Ì¶Ñ1
+n
+java:S1104"QMake pane2 a static final constant or non-public and provide accessors if needed.(Ëˆ±¹8Í¦Ì¶Ñ1
+{
+java:S1104"^Make txtFieldCustomerId a static final constant or non-public and provide accessors if needed.(æ…À8Í¦Ì¶Ñ1
+z
+java:S1104 "XMake txtFieldName a static final constant or non-public and provide accessors if needed.(´¼–çøÿÿÿÿ8Í¦Ì¶Ñ1
+~
+java:S1104!"aMake txtFieldContactNumber a static final constant or non-public and provide accessors if needed.(ßÏŞÇ8Í¦Ì¶Ñ1
+x
+java:S1104""[Make txtFieldEmailT2 a static final constant or non-public and provide accessors if needed.(²ç¢Ñ8Í¦Ì¶Ñ1
+}
+java:S1104#"[Make txtFieldAddress a static final constant or non-public and provide accessors if needed.(Å»Îÿÿÿÿÿ8Î¦Ì¶Ñ1
+w
+java:S1104$"UMake btnUpdate a static final constant or non-public and provide accessors if needed.(”ƒ³Šÿÿÿÿÿ8Î¦Ì¶Ñ1
+r
+java:S1104%"UMake btnReload a static final constant or non-public and provide accessors if needed.(‘•õû8Î¦Ì¶Ñ1
+€
+java:S1104&"^Make tblCustomerDetilas a static final constant or non-public and provide accessors if needed.(ƒ³òïúÿÿÿÿ8Î¦Ì¶Ñ1
+Ÿ
+java:S1186—"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æ…¯®8ä¦Ì¶Ñ1
+¤
+java:S1186±"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎÎ¥±ùÿÿÿÿ8ä¦Ì¶Ñ1
+O
+java:S1602†",Remove useless curly braces around statement(ğƒ´Áÿÿÿÿÿ8È¢Ÿ·Ñ1
+k	java:S100—"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ…¯®8è¦Ì¶Ñ1
+P
+java:S1172›"2Remove this unused method parameter "actionEvent".(À­üÜ8é¦Ì¶Ñ1
+P
+java:S1172µ"2Remove this unused method parameter "actionEvent".(°§¾8ê¦Ì¶Ñ1
+P
+java:S1172÷"2Remove this unused method parameter "actionEvent".(Ñ®ìŞ8½ßû¶Ñ1
+M
+java:S1128"1Remove this unused import 'bo.custom.EmployeeBo'.(ŠØº=8Ôİ§·Ñ1
+I
+java:S1128
+",Remove this unused import 'dto.EmployeeDto'.(±‹›…8Ôİ§·Ñ1
+J
+java:S1128"(Remove this unused import 'dto.ItemDto'.(‚Æ‘ıÿÿÿÿ8Ôİ§·Ñ1
+G
+java:S1128"*Remove this unused import 'dto.tm.ItemTm'.( ƒúš8Ôİ§·Ñ1
+I
+java:S1128",Remove this unused import 'entity.Customer'.(éş²¢8Ôİ§·Ñ1
+k
+java:S1128"NRemove this unused import 'java.sql.SQLIntegrityConstraintViolationException'.(¤¡†8Ôİ§·Ñ1
