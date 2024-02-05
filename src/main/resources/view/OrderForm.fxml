@@ -51,7 +51,7 @@
                </rowConstraints>
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96989a" height="490.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="140.0" GridPane.rowIndex="9" />
-                  <Button fx:id="btnHome" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="Home" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button fx:id="btnHome" mnemonicParsing="false" onAction="#homeButtonOnAction" prefHeight="31.0" prefWidth="127.0" text="Home" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
                       <Button onAction="#homeButtonOnAction" text="Home" />
 
                       <font>
@@ -64,25 +64,25 @@
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnItemCategory" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="Item Category" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <Button fx:id="btnItemCategory" mnemonicParsing="false" onAction="#itemCategoryButtonOnAction" prefHeight="31.0" prefWidth="127.0" text="Item Category" GridPane.columnIndex="1" GridPane.rowIndex="6">
                       <Button onAction="#itemCategoryButtonOnAction" text="Home" />
                       <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnItem" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="Item" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                  <Button fx:id="btnItem" mnemonicParsing="false" onAction="#itemButtonOnAction" prefHeight="31.0" prefWidth="127.0" text="Item" GridPane.columnIndex="1" GridPane.rowIndex="8">
                       <Button onAction="#itemButtonOnAction" text="Home" />
                       <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnUser" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="User" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                  <Button fx:id="btnUser" mnemonicParsing="false" onAction="#userButtonOnAction" prefHeight="31.0" prefWidth="127.0" text="User" GridPane.columnIndex="1" GridPane.rowIndex="10">
                       <Button onAction="#userButtonOnAction" text="Home" />
                       <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnReport" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="Report" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                  <Button fx:id="btnReport" mnemonicParsing="false" onAction="#reportButtonOnAction" prefHeight="31.0" prefWidth="127.0" text="Report" GridPane.columnIndex="1" GridPane.rowIndex="12">
                       <Button onAction="#reportButtonOnAction" text="Home" />
                       <font>
                         <Font name="Arial Bold" size="16.0" />

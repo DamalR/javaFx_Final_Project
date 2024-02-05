@@ -1,11 +1,18 @@
 
 L
-java:S37402"/Provide the parametrized type for this generic.(èï”8Å³›…Ñ1
+java:S37405"/Provide the parametrized type for this generic.(èï”8à«»´Ó1
+L
+java:S3740>"/Provide the parametrized type for this generic.(èï”8à«»´Ó1
 
-java:S14883"]Immediately return this expression instead of assigning it to the temporary variable "list1".(Şˆƒ¯øÿÿÿÿ8…Ñ1
+java:S14886"]Immediately return this expression instead of assigning it to the temporary variable "list1".(Şˆƒ¯øÿÿÿÿ8à«»´Ó1
 g
-java:S2095("EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8ÆçÇ¯Ñ1
+java:S2095+"EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8í«»´Ó1
+]	java:S125;"<This block of commented-out lines of code should be removed.(·Èşõùÿÿÿÿ8ø«»´Ó1
 I
-java:S1128",Remove this unused import 'dto.EmployeeDto'.(±‹›…8Ä¨‡®Ñ1
+java:S1128",Remove this unused import 'db.DBConnection'.(Šùà†8ñÑ§úÕ1
 E
-java:S1128"(Remove this unused import 'entity.Item'.(ÏÂã8éÅÈ¯Ñ1
+java:S1128"(Remove this unused import 'entity.Item'.(ÏÂã8ñÑ§úÕ1
+Y
+java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8ñÑ§úÕ1
+K
+java:S1128"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw8ñÑ§úÕ1

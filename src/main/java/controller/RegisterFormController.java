@@ -2,24 +2,28 @@ package controller;
 
 import bo.BoFactory;
 import bo.custom.EmployeeBo;
-import bo.custom.ItemCategoryBo;
+import dao.custom.EmployeeDao;
+import dao.custom.impl.EmployeeDaoImpl;
 import dao.util.BoType;
+import dao.util.HibernateUtil;
 import dto.EmployeeDto;
-import dto.ItemCategoryDto;
-import dto.ItemDto;
-import dto.tm.EmployeeTm;
-import dto.tm.EmployeeTm2;
-import dto.tm.ItemTm;
-import dto.tm.ItemTm2;
+import dto.tm.*;
+import entity.Employee;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
-import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
@@ -27,6 +31,21 @@ import java.util.List;
 public class RegisterFormController {
 
     public TextField txtFieldEmployeeIdT2;
+
+    public Label lblEmpId;
+    public TableView tblEmpDetilas2;
+    public TableColumn colAdminId;
+    public TableColumn colAdminName;
+    public TableColumn colAdminContact;
+    public TableColumn colAdminEmail;
+    public TableColumn colAdminDelete;
+    public Text txtName2;
+    public TextField txtFieldName2;
+    public Text txtEmployeeId2;
+    public TextField txtFieldEmployeeIdT3;
+    public Button btnSearchName2;
+    public Button btnSearchEmpId2;
+    public TableView tblAdminDetilas;
     @FXML
     private BorderPane pane;
 
@@ -133,6 +152,8 @@ public class RegisterFormController {
     private Label txtTitle;
 
     private EmployeeBo employeeBo = BoFactory.getInstance().getBo(BoType.EMPLOYEE);
+    private EmployeeDao employeeDao = new EmployeeDaoImpl();
+
 
     public void initialize(){
         colId.setCellValueFactory(new PropertyValueFactory<>("empId"));
@@ -142,11 +163,18 @@ public class RegisterFormController {
         colDelete.setCellValueFactory(new PropertyValueFactory<>("btn"));
 
         loadEmpTable();
+        generateId();
 
         tblEmpDetilas.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
             setData((EmployeeTm) newValue);
         });
+
+
     }
+
+
+
+
 
     private void setData(EmployeeTm newValue) {
         if (newValue != null) {
@@ -205,7 +233,6 @@ public class RegisterFormController {
                             txtFieldFullName.getText(),
                             txtFieldEmail.getText(),
                             txtFieldContactNumber.getText(),
-                            txtFieldUsername.getText(),
                             txtFieldPassword.getText()
                     ));
             if (isSaved){
@@ -220,7 +247,19 @@ public class RegisterFormController {
     }
 
     public void homeButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        System.out.println("Call Home Button");
+        Stage stage = (Stage) pane.getScene().getWindow();
+        System.out.println("Outer Try");
+        try {
+            System.out.println("Inner Try");
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/DashboardForm.fxml"))));
+            stage.setTitle("Customer Form");
+            stage.show();
+            System.out.println("Go back to Dashboard!");
+        } catch (IOException e) {
+            System.out.println("Go back to dashboard Exception!");
+            throw new RuntimeException(e);
+        }
     }
 
     public void OrderButtonOnAction(javafx.event.ActionEvent actionEvent) {
@@ -243,24 +282,34 @@ public class RegisterFormController {
 
     }
 
-//    public void generateId(){
-//        try {
-//            EmployeeDto dto = emplo.lastOrder();
-//            if (dto!=null){
-//                String id = dto.getOrderId();
-//                int num = Integer.parseInt(id.split("[D]")[1]);
-//                num++;
-//                lblOrderId.setText(String.format("D%03d",num));
-//            }else{
-//                lblOrderId.setText("D001");
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    public void generateId() {
+        try {
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.openSession();
 
+            session.beginTransaction();
 
+            Query<Employee> query = session.createQuery("FROM Employee ORDER BY empId DESC");
+            query.setMaxResults(1);
+            List<Employee> resultList = query.getResultList();
+
+            if (!resultList.isEmpty()) {
+                String id = resultList.get(0).getEmpId();
+                if (!id.isEmpty() && id.matches("D\\d{3}")) {
+                    int num = Integer.parseInt(id.substring(1)) + 1;
+                    lblEmpId.setText(String.format("D%03d", num));
+                } else {
+                    lblEmpId.setText("D001");
+                }
+            } else {
+                lblEmpId.setText("D001");
+            }
+            session.getTransaction().commit();
+            session.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
 

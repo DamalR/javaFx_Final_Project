@@ -22,6 +22,7 @@ public class BoFactory {
             case EMPLOYEE:return (T) new EmployeeBoImpl();
             case ITEM:return (T) new ItemBoImpl();
             case CUSTOMER:return (T) new CustomerBoImpl();
+            case ADMIN:return (T) new CustomerBoImpl();
 
         }
         return null;

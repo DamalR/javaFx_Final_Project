@@ -3,7 +3,6 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -15,8 +14,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -40,6 +37,7 @@ public class OrderFormController {
     public TextField txtFieldSearchCustomerT2;
     public Button btnSearchCustomerT2;
     public BorderPane pane;
+    public TextField txtFieldOrderIdT1;
     @FXML
     private BorderPane pane2;
 
@@ -190,77 +188,30 @@ public class OrderFormController {
     @FXML
     private Label txtTitle;
 
-    @FXML
-    void OrderButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void addCustomerButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void addItemButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void homeButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void itemButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void itemCategoryButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void placeOrderButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void reportButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void searchButtonOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void userButtonOnAction(ActionEvent event) {
-
-    }
-
-
-
 
     public void homeButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.homeCaller(stage);
     }
 
     public void OrderButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.homeCaller(stage);
     }
 
     public void itemCategoryButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.itemCategoryCaller(stage);
     }
 
     public void itemButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.itemCaller(stage);
     }
 
     public void userButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.userCaller(stage);
     }
 
     public void reportButtonOnAction(javafx.event.ActionEvent actionEvent) {

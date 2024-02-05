@@ -12,11 +12,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
@@ -182,6 +188,7 @@ public class ItemFormController {
 
     @FXML
     private TableColumn<?, ?> colDeleteT3;
+    private StackPane contentArea;
 
     @FXML
     private Label txtTitle;
@@ -291,9 +298,18 @@ public class ItemFormController {
     }
 
 
-    public void homeButtonOnAction(ActionEvent actionEvent) {
-
+    public void homeButtonOnAction(ActionEvent actionEvent) throws IOException {
+//      Parent fxml = FXMLLoader.load(getClass().getResource("../../resources/view/DashboardForm.fxml"));
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../resources/view/DashboardForm.fxml"))));
+            stage.setTitle("Customer Form");
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+  
 
     public void OrderButtonOnAction(ActionEvent actionEvent) {
 

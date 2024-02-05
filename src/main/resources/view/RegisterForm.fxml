@@ -137,7 +137,7 @@
                                           <Text fx:id="txtFullName" strokeType="OUTSIDE" strokeWidth="0.0" text="Full name :" GridPane.rowIndex="2" />
                                           <Text fx:id="txtEmail" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" GridPane.rowIndex="4" />
                                           <Text fx:id="txtContactNumber" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number :" GridPane.rowIndex="6" />
-                                          <Text fx:id="txtUsername" strokeType="OUTSIDE" strokeWidth="0.0" text="Username :" GridPane.rowIndex="8" />
+                                          <Text fx:id="txtUsername" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" GridPane.rowIndex="8" />
                                           <Text fx:id="txtPassword" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" GridPane.rowIndex="10" />
                                           <Text fx:id="txtConfirmPassword" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password :" GridPane.rowIndex="12" />
                                           <TextField fx:id="txtFieldFullName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -160,6 +160,7 @@
                                           </GridPane>
                                           <ComboBox fx:id="comboBoxSelectAdminEmployee" prefHeight="31.0" prefWidth="275.0" GridPane.columnIndex="1" />
                                           <TextField fx:id="txtFieldEmployeeId" GridPane.rowIndex="15" />
+                                          <Label fx:id="lblEmpId" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="15" />
                                        </children>
                                     </GridPane>
                                  </children>

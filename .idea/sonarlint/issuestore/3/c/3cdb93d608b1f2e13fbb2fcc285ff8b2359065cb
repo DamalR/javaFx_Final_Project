@@ -1,48 +1,87 @@
 
-h	java:S112´"FDefine and throw a dedicated exception instead of using a generic one.(«±ôÍøÿÿÿÿ8¥»·Ñ1
-h	java:S112¶"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¨»·Ñ1
+h	java:S112Ğ"FDefine and throw a dedicated exception instead of using a generic one.(«±ôÍøÿÿÿÿ8¹¤˜»×1
+h	java:S112Ò"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹¤˜»×1
+h	java:S112…"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹¤˜»×1
 L
-java:S3740a"/Provide the parametrized type for this generic.( ç¡ã8ª»·Ñ1
-Q
-java:S3740d"/Provide the parametrized type for this generic.(ºšãÿıÿÿÿÿ8«»·Ñ1
+java:S3740$"/Provide the parametrized type for this generic.(Ä¤Ğè8¹¤˜»×1
 L
-java:S3740g"/Provide the parametrized type for this generic.(Œà•®8¬»·Ñ1
-Q
-java:S3740j"/Provide the parametrized type for this generic.(á¹ŸŒÿÿÿÿÿ8­»·Ñ1
-Q
-java:S3740m"/Provide the parametrized type for this generic.(”Ú£öÿÿÿÿÿ8®»·Ñ1
+java:S3740%"/Provide the parametrized type for this generic.(ıö 8¹¤˜»×1
 L
-java:S3740p"/Provide the parametrized type for this generic.(´÷¸ 8°»·Ñ1
-‚
-java:S1104"`Make txtFieldEmployeeIdT2 a static final constant or non-public and provide accessors if needed.(ìª»Œüÿÿÿÿ8²»·Ñ1
-¤
-java:S1186Ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(²Ñ¤·ùÿÿÿÿ8ñ»·Ñ1
-
-java:S1186â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ç¸ÍP8ò»·Ñ1
-Ÿ
-java:S1186æ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô¢²¡8ò»·Ñ1
-Ÿ
-java:S1186ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†›†ò8ò»·Ñ1
-¤
-java:S1186î"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ß‡ğíşÿÿÿÿ8ò»·Ñ1
-¤
-java:S1186ò"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö´ñıÿÿÿÿ8ò»·Ñ1
-J
-java:S1602’",Remove useless curly braces around statement(±‡´8û»·Ñ1
-Y	java:S125™"<This block of commented-out lines of code should be removed.(”¹“û8ı»·Ñ1
-U
-java:S1172É"2Remove this unused method parameter "actionEvent".(ŒÓçşÿÿÿÿ8„»·Ñ1
-j	java:S100â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¸ÍP8†»·Ñ1
-Y	java:S125ö"<This block of commented-out lines of code should be removed.(Ä‘µô8ù•ˆ¸Ñ1
+java:S3740&"/Provide the parametrized type for this generic.(ú¾ö×8¹¤˜»×1
+Q
+java:S3740'"/Provide the parametrized type for this generic.(‰à«Õüÿÿÿÿ8¹¤˜»×1
+Q
+java:S3740("/Provide the parametrized type for this generic.(çÀ†Ûûÿÿÿÿ8¹¤˜»×1
+Q
+java:S3740)"/Provide the parametrized type for this generic.(Îü½Îşÿÿÿÿ8¹¤˜»×1
+Q
+java:S37400"/Provide the parametrized type for this generic.(Ë½º°ûÿÿÿÿ8¹¤˜»×1
+L
+java:S3740t"/Provide the parametrized type for this generic.( ç¡ã8¹¤˜»×1
+Q
+java:S3740w"/Provide the parametrized type for this generic.(ºšãÿıÿÿÿÿ8¹¤˜»×1
+L
+java:S3740z"/Provide the parametrized type for this generic.(Œà•®8¹¤˜»×1
+Q
+java:S3740}"/Provide the parametrized type for this generic.(á¹ŸŒÿÿÿÿÿ8¹¤˜»×1
 R
-java:S1128"5Remove this unused import 'bo.custom.ItemCategoryBo'.(÷øš»8ú•ˆ¸Ñ1
+java:S3740€"/Provide the parametrized type for this generic.(”Ú£öÿÿÿÿÿ8¹¤˜»×1
 M
-java:S1128"0Remove this unused import 'dto.ItemCategoryDto'.(Ó·ÉÙ8ú•ˆ¸Ñ1
+java:S3740ƒ"/Provide the parametrized type for this generic.(´÷¸ 8¹¤˜»×1
+‚
+java:S1104!"`Make txtFieldEmployeeIdT2 a static final constant or non-public and provide accessors if needed.(ìª»Œüÿÿÿÿ8º¤˜»×1
+q
+java:S1104#"TMake lblEmpId a static final constant or non-public and provide accessors if needed.(‘Å½ì8º¤˜»×1
+w
+java:S1104$"ZMake tblEmpDetilas2 a static final constant or non-public and provide accessors if needed.(Ä¤Ğè8º¤˜»×1
+s
+java:S1104%"VMake colAdminId a static final constant or non-public and provide accessors if needed.(ıö 8º¤˜»×1
+u
+java:S1104&"XMake colAdminName a static final constant or non-public and provide accessors if needed.(ú¾ö×8º¤˜»×1
+}
+java:S1104'"[Make colAdminContact a static final constant or non-public and provide accessors if needed.(‰à«Õüÿÿÿÿ8º¤˜»×1
+{
+java:S1104("YMake colAdminEmail a static final constant or non-public and provide accessors if needed.(çÀ†Ûûÿÿÿÿ8º¤˜»×1
+|
+java:S1104)"ZMake colAdminDelete a static final constant or non-public and provide accessors if needed.(Îü½Îşÿÿÿÿ8º¤˜»×1
+v
+java:S1104*"TMake txtName2 a static final constant or non-public and provide accessors if needed.(‹ñüÅûÿÿÿÿ8º¤˜»×1
+{
+java:S1104+"YMake txtFieldName2 a static final constant or non-public and provide accessors if needed.(ÊºÌÿúÿÿÿÿ8º¤˜»×1
+w
+java:S1104,"ZMake txtEmployeeId2 a static final constant or non-public and provide accessors if needed.(…ª¹–8º¤˜»×1
+‚
+java:S1104-"`Make txtFieldEmployeeIdT3 a static final constant or non-public and provide accessors if needed.(ÌşÀ•ıÿÿÿÿ8º¤˜»×1
+|
+java:S1104."ZMake btnSearchName2 a static final constant or non-public and provide accessors if needed.(ŠÅñÜşÿÿÿÿ8º¤˜»×1
+}
+java:S1104/"[Make btnSearchEmpId2 a static final constant or non-public and provide accessors if needed.(ÅçÀ¥şÿÿÿÿ8º¤˜»×1
+}
+java:S11040"[Make tblAdminDetilas a static final constant or non-public and provide accessors if needed.(Ë½º°ûÿÿÿÿ8»¤˜»×1
+h
+java:S2095 "EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8Ş·¡»×1
+
+java:S1186‰"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ç¸ÍP8Ô¤˜»×1
+Ÿ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô¢²¡8Ô¤˜»×1
+Ÿ
+java:S1186‘"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†›†ò8Ô¤˜»×1
+¤
+java:S1186•"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ß‡ğíşÿÿÿÿ8Ô¤˜»×1
+¤
+java:S1186™"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö´ñıÿÿÿÿ8Ô¤˜»×1
 J
-java:S1128	"(Remove this unused import 'dto.ItemDto'.(‚Æ‘ıÿÿÿÿ8ú•ˆ¸Ñ1
-G
-java:S1128"*Remove this unused import 'dto.tm.ItemTm'.( ƒúš8ú•ˆ¸Ñ1
-M
-java:S1128"+Remove this unused import 'dto.tm.ItemTm2'.(áÓ¿ßüÿÿÿÿ8ú•ˆ¸Ñ1
-T
-java:S1128"7Remove this unused import 'java.awt.event.ActionEvent'.(Úù“‘8ú•ˆ¸Ñ1
+java:S1602¨",Remove useless curly braces around statement(±‡´8Ù¤˜»×1
+Y	java:S125µ"<This block of commented-out lines of code should be removed.(”¹“û8Ù¤˜»×1
+U
+java:S1172å"2Remove this unused method parameter "actionEvent".(ŒÓçşÿÿÿÿ8İ¤˜»×1
+U
+java:S1172ù"2Remove this unused method parameter "actionEvent".(²Ñ¤·ùÿÿÿÿ8Ş¤˜»×1
+M	java:S106ú"+Replace this use of System.out by a logger.(ÿû…şÿÿÿÿ8Ş¤˜»×1
+H	java:S106ü"+Replace this use of System.out by a logger.(˜Ç÷8Ş¤˜»×1
+H	java:S106ş"+Replace this use of System.out by a logger.(øƒúÈ8ß¤˜»×1
+M	java:S106‚"+Replace this use of System.out by a logger.(«±‰İşÿÿÿÿ8ã¤˜»×1
+G	java:S106„"+Replace this use of System.out by a logger.(‘Ïÿa8ã¤˜»×1
+j	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¸ÍP8ã¤˜»×1
+L
+java:S1068›"/Remove this unused "employeeDao" private field.(¥‡½-8æ¤˜»×1

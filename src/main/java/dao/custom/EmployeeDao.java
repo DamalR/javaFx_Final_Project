@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface EmployeeDao extends CrudDao<Employee> {
 //    List<EmployeeDto> allEmployees() throws SQLException, ClassNotFoundException;
+EmployeeDto lastEmployee() throws SQLException, ClassNotFoundException;
 }

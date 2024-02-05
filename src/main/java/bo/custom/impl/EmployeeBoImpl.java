@@ -26,7 +26,6 @@ public class EmployeeBoImpl implements EmployeeBo {
                 dto.getName(),
                 dto.getEmail(),
                 dto.getContactNumber(),
-                dto.getUserName(),
                 dto.getPassword()
         ));
     }
@@ -51,7 +50,6 @@ public class EmployeeBoImpl implements EmployeeBo {
                     employee.getName(),
                     employee.getContactNumber(),
                     employee.getEmail(),
-                    employee.getUserName(),
                     employee.getPassword()
             ));
         }
