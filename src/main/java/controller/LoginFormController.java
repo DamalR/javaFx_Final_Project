@@ -1,7 +1,7 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
-import dao.util.HibernateUtil;
+import dao.util.*;
 import db.DBConnection;
 import entity.Employee;
 import javafx.fxml.FXML;
@@ -12,6 +12,8 @@ import javafx.stage.Window;
 import org.hibernate.Session;
 
 import java.sql.SQLException;
+
+import static dao.util.HibernateUtil.validateUser;
 
 
 public class LoginFormController {
@@ -78,23 +80,5 @@ public class LoginFormController {
         alert.setContentText(message);
         alert.initOwner(owner);
         alert.show();
-    }
-
-    private boolean validateUser(String emailId, String password) {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            session.beginTransaction();
-
-            Employee employee = session.createQuery("FROM Employee WHERE email = :emailId AND password = :password", Employee.class)
-                    .setParameter("emailId", emailId)
-                    .setParameter("password", password)
-                    .uniqueResult();
-
-            session.getTransaction().commit();
-
-            return employee != null;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
     }
 }

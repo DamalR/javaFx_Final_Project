@@ -1,20 +1,29 @@
 package controller;
 
 
+import bo.BoFactory;
+import bo.custom.OrdersBo;
+import com.jfoenix.controls.JFXTextField;
+import dao.util.BoType;
+import dao.util.HibernateUtil;
+import dto.OrdersDto;
+import entity.Employee;
+import entity.Orders;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+
 import java.io.IOException;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.util.List;
 import java.util.Objects;
 
 public class OrderFormController {
@@ -38,6 +47,10 @@ public class OrderFormController {
     public Button btnSearchCustomerT2;
     public BorderPane pane;
     public TextField txtFieldOrderIdT1;
+    public TextField txtFieldDate;
+    public JFXTextField textFieldItemCategory;
+    public TextField textFieldItemCategory1;
+    public Label lblOrderId;
     @FXML
     private BorderPane pane2;
 
@@ -188,7 +201,11 @@ public class OrderFormController {
     @FXML
     private Label txtTitle;
 
+    public void initialize(){
+        generateOrderId();
+    }
 
+    private OrdersBo ordersBo = BoFactory.getInstance().getBo(BoType.ORDERS);
     public void homeButtonOnAction(javafx.event.ActionEvent actionEvent) {
         Stage stage = (Stage) pane.getScene().getWindow();
         ButtonControllers.homeCaller(stage);
@@ -219,6 +236,40 @@ public class OrderFormController {
     }
 
     public void placeOrderButtonOnAction(javafx.event.ActionEvent actionEvent) {
+        try {
+            boolean isSaved = ordersBo.saveOrders(
+                    new OrdersDto(lblOrderId.getText(),
+                            txtFieldCustomerName.getText(),
+                            txtFieldCustomerContactNum.getText(),
+                            textFieldItemCategory1.getText(),
+                            txtFieldItemName.getText(),
+                            txtFiledFault.getText(),
+                            txtFieldDate.getText(),
+                            txtFieldDescription.getText(),
+                            txtFieldEmail.getText(),
+                            "Pending"
+                    ));
+            if (isSaved){
+                new Alert(Alert.AlertType.INFORMATION,"Order Saved!").show();
+                generateOrderId();
+                clearFields();
+            }
+        } catch (SQLIntegrityConstraintViolationException ex){
+            new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void clearFields() {
+        txtFieldCustomerName.clear();
+        txtFieldCustomerContactNum.clear();
+        textFieldItemCategory1.clear();
+        txtFieldItemName.clear();
+        txtFiledFault.clear();
+        txtFieldDate.clear();
+        txtFieldDescription.clear();
+        txtFieldEmail.clear();
 
     }
 
@@ -233,6 +284,36 @@ public class OrderFormController {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public void generateOrderId() {
+        try {
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.openSession();
+
+            session.beginTransaction();
+
+            Query<Orders> query = session.createQuery("FROM Orders ORDER BY orderId DESC");
+            query.setMaxResults(1);
+            List<Orders> resultList = query.getResultList();
+
+            if (!resultList.isEmpty()) {
+                String id = resultList.get(0).getOrderId();
+                if (!id.isEmpty() && id.matches("D\\d{3}")) {
+                    int num = Integer.parseInt(id.substring(1)) + 1;
+                    lblOrderId.setText(String.format("D%03d", num));
+                } else {
+                    lblOrderId.setText("D001");
+                }
+            } else {
+                lblOrderId.setText("D001");
+            }
+            session.getTransaction().commit();
+            session.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void addItemButtonOnAction(javafx.event.ActionEvent actionEvent) {

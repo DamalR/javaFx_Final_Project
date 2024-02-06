@@ -50,7 +50,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
     @Override
     public List<Employee> getAll() throws SQLException, ClassNotFoundException {
         Session session = HibernateUtil.getSession();
-        Query query = session.createQuery("FROM Employee");
+        Query query = session.createQuery("FROM Employee ");
         List<Employee> list1 = query.list();
         return list1;
     }

@@ -18,7 +18,6 @@ public class ItemCategoryBoImpl implements ItemCategoryBo {
         return itemCategoryDao.save(new ItemCategory(
                 dto.getCategoryId(),
                 dto.getCategoryName()
-
         ));
     }
 

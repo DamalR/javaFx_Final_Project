@@ -2,6 +2,9 @@ package dao.custom.impl;
 
 import dao.custom.ItemCategoryDao;
 import dao.util.CrudUtil;
+import dto.ItemCategoryDto;
+import dto.ItemDto;
+import entity.Item;
 import entity.ItemCategory;
 import dao.util.HibernateUtil;
 
@@ -20,9 +23,6 @@ import java.util.List;
 
 
 public class ItemCategoryDaoImpl implements ItemCategoryDao {
-
-
-
     @Override
     public boolean save(ItemCategory entity) throws SQLException, ClassNotFoundException {
         Session session = HibernateUtil.getSession();
@@ -54,21 +54,26 @@ public class ItemCategoryDaoImpl implements ItemCategoryDao {
     @Override
     public List<ItemCategory> getAll() throws SQLException, ClassNotFoundException {
         Session session = HibernateUtil.getSession();
-        Query query = session.createQuery("FROM ItemCategory");
+        Query query = session.createQuery("FROM ItemCategory ");
         List<ItemCategory> list1 = query.list();
-//        List<ItemCategory> list = new ArrayList<>();
-////
-//        String sql = "SELECT * FROM itemCategory";
-////        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
-//        ResultSet resultSet = CrudUtil.execute(sql);
-//        while (resultSet.next()){
-//
-//            list.add(new ItemCategory(
-//                    resultSet.getString(1),
-//                    resultSet.getString(2)
-//            ));
-//        }
         return list1;
+    }
+
+    public ItemCategoryDto lastItemCategory() {
+        Session session = HibernateUtil.getSession();
+        Query query = session.createQuery("FROM ItemCategory ");
+        query.setMaxResults(1);
+        List<ItemCategory> itemCategory = query.list();
+
+        if (!itemCategory.isEmpty()) {
+            ItemCategory lastItemCategory = itemCategory.get(0);
+            return new ItemCategoryDto(
+                    lastItemCategory.getCategoryId(),
+                    lastItemCategory.getCategoryName()
+            );
+        }
+        return (ItemCategoryDto) itemCategory;
+
     }
 
 

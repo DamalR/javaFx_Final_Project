@@ -5,9 +5,12 @@ package controller;
 import bo.BoFactory;
 import dao.util.BoType;
 import bo.custom.ItemBo;
+import dao.util.HibernateUtil;
 import dto.ItemDto;
 import dto.tm.ItemTm;
 import dto.tm.ItemTm2;
+import entity.Item;
+import entity.Orders;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +24,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -43,7 +49,7 @@ public class ItemFormController {
     public Button btnUpdate;
     public BorderPane pane;
     public Button btnReloadT2;
-
+    public Label lblItemId;
 
 
     @FXML
@@ -195,6 +201,7 @@ public class ItemFormController {
     private ItemBo itemBo = BoFactory.getInstance().getBo(BoType.ITEM);
 
     public void initialize() throws SQLException, ClassNotFoundException {
+        generateItemId();
         comboBoxItemCategory.getItems().addAll("Electrical","Electronic");
 
         colItemId.setCellValueFactory(new PropertyValueFactory<>("itemId"));
@@ -217,6 +224,8 @@ public class ItemFormController {
 
         tblDeleteItem.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
 //            setData((ItemTm) newValue);
+
+
         });
     }
 
@@ -297,34 +306,29 @@ public class ItemFormController {
         }
     }
 
-
-    public void homeButtonOnAction(ActionEvent actionEvent) throws IOException {
-//      Parent fxml = FXMLLoader.load(getClass().getResource("../../resources/view/DashboardForm.fxml"));
+    public void homeButtonOnAction(ActionEvent actionEvent) {
         Stage stage = (Stage) pane.getScene().getWindow();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../resources/view/DashboardForm.fxml"))));
-            stage.setTitle("Customer Form");
-            stage.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        ButtonControllers.homeCaller(stage);
     }
-  
 
-    public void OrderButtonOnAction(ActionEvent actionEvent) {
-
+    public void orderButtonOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.orderCaller(stage);
     }
 
     public void itemCategoryButtonOnAction(ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.itemCategoryCaller(stage);
     }
 
     public void itemButtonOnAction(ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.itemCaller(stage);
     }
 
     public void userButtonOnAction(ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.userCaller(stage);
     }
 
     public void reportButtonOnAction(ActionEvent actionEvent) {
@@ -334,20 +338,28 @@ public class ItemFormController {
     public void saveButtonOnAction(ActionEvent actionEvent) {
         try {
             boolean isSaved = itemBo.saveItem(
-                    new ItemDto(txtFieldItemId.getText(),
+                    new ItemDto(lblItemId.getText(),
                             txtFieldItemName.getText(),
                             txtFieldFault.getText(),
                             comboBoxItemCategory.getSelectionModel().getSelectedItem().toString()
                     ));
             if (isSaved){
                 new Alert(Alert.AlertType.INFORMATION,"Item Saved!").show();
+                generateItemId();
+                clearSaveFields();
             }
         } catch (SQLIntegrityConstraintViolationException ex){
             new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
+    }
 
+    private void clearSaveFields() {
+        txtFieldItemName.clear();
+        txtFieldFault.clear();
+        comboBoxItemCategory.getSelectionModel();
+        txtFieldImage.clear();
 
     }
 
@@ -385,5 +397,36 @@ public class ItemFormController {
         loadItemTable();
         tblItemT2.refresh();
     }
+
+    public void generateItemId() {
+        try {
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.openSession();
+
+            session.beginTransaction();
+
+            Query<Item> query = session.createQuery("FROM Item ORDER BY itemId DESC");
+            query.setMaxResults(1);
+            List<Item> resultList = query.getResultList();
+
+            if (!resultList.isEmpty()) {
+                String id = resultList.get(0).getItemId();
+                if (!id.isEmpty() && id.matches("I\\d{3}")) {
+                    int num = Integer.parseInt(id.substring(1)) + 1;
+                    lblItemId.setText(String.format("I%03d", num));
+                } else {
+                    lblItemId.setText("I001");
+                }
+            } else {
+                lblItemId.setText("I001");
+            }
+            session.getTransaction().commit();
+            session.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 

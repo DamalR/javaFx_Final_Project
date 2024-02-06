@@ -166,7 +166,7 @@ public class RegisterFormController {
         generateId();
 
         tblEmpDetilas.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
-            setData((EmployeeTm) newValue);
+            setData((EmployeeTm2) newValue);
         });
 
 
@@ -176,7 +176,7 @@ public class RegisterFormController {
 
 
 
-    private void setData(EmployeeTm newValue) {
+    private void setData(EmployeeTm2 newValue) {
         if (newValue != null) {
 //            txtFieldEmployeeIdT2.setEditable(false);
 //            txtFieldEmployeeIdT2.setText(newValue.getEmpId());
@@ -215,7 +215,7 @@ public class RegisterFormController {
         try {
             boolean isDeleted = employeeBo.deleteCustomer(id);
             if (isDeleted){
-                new Alert(Alert.AlertType.INFORMATION,"Customer Deleted!").show();
+                new Alert(Alert.AlertType.INFORMATION,"Employee Deleted!").show();
                 loadEmpTable();
             }else{
                 new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
@@ -229,7 +229,7 @@ public class RegisterFormController {
     public void submitButtonOnAction(javafx.event.ActionEvent actionEvent) {
         try {
             boolean isSaved = employeeBo.saveEmployee(
-                    new EmployeeDto(txtFieldEmployeeId.getText(),
+                    new EmployeeDto(lblEmpId.getText(),
                             txtFieldFullName.getText(),
                             txtFieldEmail.getText(),
                             txtFieldContactNumber.getText(),
@@ -237,6 +237,8 @@ public class RegisterFormController {
                     ));
             if (isSaved){
                 new Alert(Alert.AlertType.INFORMATION,"Item Category Saved!").show();
+                generateId();
+                clearFields();
             }
         } catch (SQLIntegrityConstraintViolationException ex){
             new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show();
@@ -246,36 +248,38 @@ public class RegisterFormController {
 
     }
 
+    private void clearFields() {
+        txtFieldFullName.clear();
+        txtFieldEmail.clear();
+        txtFieldContactNumber.clear();
+        txtFieldPassword.clear();
+        txtFieldConfirmPassword.clear();
+
+    }
+
     public void homeButtonOnAction(javafx.event.ActionEvent actionEvent) {
-        System.out.println("Call Home Button");
         Stage stage = (Stage) pane.getScene().getWindow();
-        System.out.println("Outer Try");
-        try {
-            System.out.println("Inner Try");
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/DashboardForm.fxml"))));
-            stage.setTitle("Customer Form");
-            stage.show();
-            System.out.println("Go back to Dashboard!");
-        } catch (IOException e) {
-            System.out.println("Go back to dashboard Exception!");
-            throw new RuntimeException(e);
-        }
+        ButtonControllers.homeCaller(stage);
     }
 
     public void OrderButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.orderCaller(stage);
     }
 
     public void itemCategoryButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.itemCategoryCaller(stage);
     }
 
     public void itemButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.itemCaller(stage);
     }
 
     public void userButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.userCaller(stage);
     }
 
     public void reportButtonOnAction(javafx.event.ActionEvent actionEvent) {

@@ -1,71 +1,85 @@
 
-h	java:S112¦"FDefine and throw a dedicated exception instead of using a generic one.(«±ôÍøÿÿÿÿ8úãæ¹Ñ1
-h	java:S112¨"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ûãæ¹Ñ1
-h	java:S112Å"FDefine and throw a dedicated exception instead of using a generic one.(«±ôÍøÿÿÿÿ8ûãæ¹Ñ1
-h	java:S112®"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ûãæ¹Ñ1
+h	java:S112®"FDefine and throw a dedicated exception instead of using a generic one.(«±ôÍøÿÿÿÿ8Âê¸å×1
+h	java:S112°"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ãê¸å×1
+h	java:S112Í"FDefine and throw a dedicated exception instead of using a generic one.(«±ôÍøÿÿÿÿ8Ãê¸å×1
+h	java:S112µ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ãê¸å×1
 K
-java:S3740%"/Provide the parametrized type for this generic.(×„ÎR8üãæ¹Ñ1
+java:S3740+"/Provide the parametrized type for this generic.(×„ÎR8Ãê¸å×1
 L
-java:S3740&"/Provide the parametrized type for this generic.(¼ˆõ‹8üãæ¹Ñ1
+java:S3740,"/Provide the parametrized type for this generic.(¼ˆõ‹8Ãê¸å×1
 Q
-java:S3740^"/Provide the parametrized type for this generic.(Ï†ùÖÿÿÿÿÿ8üãæ¹Ñ1
+java:S3740e"/Provide the parametrized type for this generic.(Ï†ùÖÿÿÿÿÿ8Ãê¸å×1
 Q
-java:S3740a"/Provide the parametrized type for this generic.(åˆÑ„ûÿÿÿÿ8üãæ¹Ñ1
+java:S3740h"/Provide the parametrized type for this generic.(åˆÑ„ûÿÿÿÿ8Ãê¸å×1
 Q
-java:S3740s"/Provide the parametrized type for this generic.(Ñ›æ®úÿÿÿÿ8üãæ¹Ñ1
+java:S3740z"/Provide the parametrized type for this generic.(Ñ›æ®úÿÿÿÿ8Ãê¸å×1
 L
-java:S3740v"/Provide the parametrized type for this generic.(´÷¸ 8üãæ¹Ñ1
+java:S3740}"/Provide the parametrized type for this generic.(´÷¸ 8Ãê¸å×1
 |
-java:S1104$"_Make btnSaveItemCategory a static final constant or non-public and provide accessors if needed.(ˆ‰‹˜8ıãæ¹Ñ1
+java:S1104*"_Make btnSaveItemCategory a static final constant or non-public and provide accessors if needed.(ˆ‰‹˜8Äê¸å×1
 {
-java:S1104%"_Make colItemCategoryIdT2 a static final constant or non-public and provide accessors if needed.(×„ÎR8ıãæ¹Ñ1
+java:S1104+"_Make colItemCategoryIdT2 a static final constant or non-public and provide accessors if needed.(×„ÎR8Äê¸å×1
 ~
-java:S1104&"aMake colItemCategoryNameT2 a static final constant or non-public and provide accessors if needed.(¼ˆõ‹8ıãæ¹Ñ1
+java:S1104,"aMake colItemCategoryNameT2 a static final constant or non-public and provide accessors if needed.(¼ˆõ‹8Äê¸å×1
 r
-java:S1104'"UMake btnReload a static final constant or non-public and provide accessors if needed.(‘•õû8ıãæ¹Ñ1
+java:S1104-"UMake btnReload a static final constant or non-public and provide accessors if needed.(‘•õû8Äê¸å×1
 ~
-java:S1104("\Make paneItemCategory a static final constant or non-public and provide accessors if needed.(ûÙ¦Íüÿÿÿÿ8ıãæ¹Ñ1
+java:S1104."\Make paneItemCategory a static final constant or non-public and provide accessors if needed.(ûÙ¦Íüÿÿÿÿ8Äê¸å×1
 p
-java:S1104)"SMake btnBack a static final constant or non-public and provide accessors if needed.(ºÀ°”8ıãæ¹Ñ1
-
-java:S1186â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ç¸ÍP8Åäæ¹Ñ1
-Ÿ
-java:S1186æ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ô¢²¡8Åäæ¹Ñ1
-Ÿ
-java:S1186ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†›†ò8Åäæ¹Ñ1
+java:S1104/"SMake btnBack a static final constant or non-public and provide accessors if needed.(ºÀ°”8Äê¸å×1
+x
+java:S11040"[Make lblItemCategory a static final constant or non-public and provide accessors if needed.(šÎ¼ó8Äê¸å×1
+h
+java:S2095¼"EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8–É¹å×1
 ¤
-java:S1186î"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ß‡ğíşÿÿÿÿ8Åäæ¹Ñ1
+java:S1186ú"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö´ñıÿÿÿÿ8ßê¸å×1
 ¤
-java:S1186ò"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö´ñıÿÿÿÿ8Åäæ¹Ñ1
-¤
-java:S1186“"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(–õÔúÿÿÿÿ8Åäæ¹Ñ1
+java:S1186š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(–õÔúÿÿÿÿ8ßê¸å×1
+€
+java:S4144æ"cUpdate this method so that its implementation is not identical to "homeButtonOnAction" on line 225.(ç¸ÍP8ßê¸å×1
 J
-java:S1602„",Remove useless curly braces around statement(´ëËÖ8Õäæ¹Ñ1
+java:S1602Œ",Remove useless curly braces around statement(´ëËÖ8âê¸å×1
 O
-java:S1905…"1Remove this unnecessary cast to "ItemCategoryTm".(’—¡æ8Öäæ¹Ñ1
+java:S1905"1Remove this unnecessary cast to "ItemCategoryTm".(’—¡æ8âê¸å×1
 O
-java:S1602",Remove useless curly braces around statement(©®êıÿÿÿÿ8×äæ¹Ñ1
+java:S1602•",Remove useless curly braces around statement(©®êıÿÿÿÿ8ãê¸å×1
 U
-java:S1905"2Remove this unnecessary cast to "ItemCategoryTm2".(ø«Ø†úÿÿÿÿ8Øäæ¹Ñ1
+java:S1905–"2Remove this unnecessary cast to "ItemCategoryTm2".(ø«Ø†úÿÿÿÿ8ãê¸å×1
+Š
+java:S1130á"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ó„ŠÂ8èê¸å×1
 P
-java:S1172Ù"2Remove this unused method parameter "actionEvent".(ó„ŠÂ8ñäæ¹Ñ1
-j	java:S100â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¸ÍP8÷äæ¹Ñ1
+java:S1172á"2Remove this unused method parameter "actionEvent".(ó„ŠÂ8èê¸å×1
+j	java:S100æ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¸ÍP8éê¸å×1
+O
+java:S1172æ"2Remove this unused method parameter "actionEvent".(ç¸ÍP8éê¸å×1
+P
+java:S1172ë"2Remove this unused method parameter "actionEvent".(Ô¢²¡8éê¸å×1
+P
+java:S1172ğ"2Remove this unused method parameter "actionEvent".(†›†ò8éê¸å×1
 U
-java:S1172ö"2Remove this unused method parameter "actionEvent".(”µ³—ÿÿÿÿÿ8úäæ¹Ñ1
-P
-java:S1172"2Remove this unused method parameter "actionEvent".(Ñ®ìŞ8ÿäæ¹Ñ1
-p	java:S100“"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–õÔúÿÿÿÿ8ÿäæ¹Ñ1
-k	java:S100—"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”éí8€åæ¹Ñ1
-P
-java:S1172—"2Remove this unused method parameter "actionEvent".(”éí8åæ¹Ñ1
+java:S1172õ"2Remove this unused method parameter "actionEvent".(ß‡ğíşÿÿÿÿ8éê¸å×1
 U
-java:S1172¨"2Remove this unused method parameter "actionEvent".(Íáå‘ùÿÿÿÿ8‚åæ¹Ñ1
+java:S1172ş"2Remove this unused method parameter "actionEvent".(”µ³—ÿÿÿÿÿ8êê¸å×1
+P
+java:S1172”"2Remove this unused method parameter "actionEvent".(Ñ®ìŞ8êê¸å×1
+p	java:S100š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–õÔúÿÿÿÿ8ëê¸å×1
+k	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”éí8ìê¸å×1
+P
+java:S1172"2Remove this unused method parameter "actionEvent".(”éí8ìê¸å×1
+U
+java:S1172¯"2Remove this unused method parameter "actionEvent".(Íáå‘ùÿÿÿÿ8íê¸å×1
 G
-java:S1128	"*Remove this unused import 'dto.tm.ItemTm'.( ƒúš8«ç¹Ñ1
-[
 java:S1128
-">Remove this unused import 'javafx.beans.value.ChangeListener'.(¸÷Í8«ç¹Ñ1
+"*Remove this unused import 'dto.tm.ItemTm'.( ƒúš8äşµæ×1
+E
+java:S1128"(Remove this unused import 'entity.Item'.(ÏÂã8äşµæ×1
+[
+java:S1128">Remove this unused import 'javafx.beans.value.ChangeListener'.(¸÷Í8äşµæ×1
 \
-java:S1128"?Remove this unused import 'javafx.beans.value.ObservableValue'.(´œ«Å8«ç¹Ñ1
+java:S1128"?Remove this unused import 'javafx.beans.value.ObservableValue'.(´œ«Å8äşµæ×1
+M
+java:S1128"0Remove this unused import 'javafx.scene.Parent'.(²ä¡È8åşµæ×1
 V
-java:S1128"9Remove this unused import 'java.util.function.Predicate'.(ïÍ–¶8«ç¹Ñ1
+java:S1128$"9Remove this unused import 'java.util.function.Predicate'.(ïÍ–¶8åşµæ×1
+M
+java:S1068‚"/Remove this unused "contentArea" private field.(ã…º8ôê¸å×1

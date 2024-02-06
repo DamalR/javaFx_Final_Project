@@ -1,6 +1,7 @@
 package dao.custom;
 
 import dao.CrudDao;
+import dto.EmployeeDto;
 import dto.ItemDto;
 import entity.Item;
 
@@ -9,4 +10,5 @@ import java.util.List;
 
 public interface ItemDao extends CrudDao<Item> {
 //    List<ItemDto> allItems() throws SQLException, ClassNotFoundException;
+ItemDto lastItem() throws SQLException, ClassNotFoundException;
 }

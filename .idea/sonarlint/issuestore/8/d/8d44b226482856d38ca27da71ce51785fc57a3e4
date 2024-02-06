@@ -1,8 +1,6 @@
 
 P
-java:S1121".Extract the assignment out of this expression.(‰À°Ûşÿÿÿÿ8ÇÍÂ½Ğ1
+java:S1121".Extract the assignment out of this expression.(‰À°Ûşÿÿÿÿ8ÇÍÂ½Ğ1
 ¶
-java:S6548
-"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜê8ËÍÂ½Ğ1
-[
-java:S1128">Remove this unused import 'bo.custom.impl.ItemCategoryBoImpl'.(…»¦ì8›±ï²Ñ1
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜê8ËÍÂ½Ğ1
+u	java:S131"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÜŸ•8ÀÑôÑ×1

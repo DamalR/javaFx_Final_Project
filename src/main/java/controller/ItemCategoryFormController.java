@@ -3,10 +3,13 @@ package controller;
 import bo.BoFactory;
 import bo.custom.ItemCategoryBo;
 import dao.util.BoType;
+import dao.util.HibernateUtil;
 import dto.ItemCategoryDto;
 import dto.tm.ItemCategoryTm;
 import dto.tm.ItemCategoryTm2;
 import dto.tm.ItemTm;
+import entity.Item;
+import entity.ItemCategory;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -22,6 +25,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -39,6 +45,7 @@ public class ItemCategoryFormController {
     public Button btnReload;
     public BorderPane paneItemCategory;
     public Button btnBack;
+    public Label lblItemCategory;
     @FXML
     private BorderPane pane;
 
@@ -125,6 +132,7 @@ public class ItemCategoryFormController {
     private ItemCategoryBo itemCategoryBo = BoFactory.getInstance().getBo(BoType.ITEMCATEGORY);
 
     public void initialize() throws ClassNotFoundException {
+        generateItemCategoryId();
         colItemCategoryId.setCellValueFactory(new PropertyValueFactory<>("categoryId"));
         colItemCategoryName.setCellValueFactory(new PropertyValueFactory<>("categoryName"));
         loadItemCategoryTable();
@@ -215,28 +223,28 @@ public class ItemCategoryFormController {
 
 
     public void homeButtonOnAction(ActionEvent actionEvent) throws IOException {
-        Parent fxml = FXMLLoader.load(getClass().getResource("../resources/view/DashboardForm.fxml"));
-        contentArea.getChildren().removeAll();
-        contentArea.getChildren().setAll(fxml);
-
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.homeCaller(stage);
     }
 
-
     public void OrderButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.homeCaller(stage);
     }
 
     public void itemCategoryButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.itemCategoryCaller(stage);
     }
 
     public void itemButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.itemCaller(stage);
     }
 
     public void userButtonOnAction(javafx.event.ActionEvent actionEvent) {
-
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.userCaller(stage);
     }
 
     public void reportButtonOnAction(javafx.event.ActionEvent actionEvent) {
@@ -246,13 +254,14 @@ public class ItemCategoryFormController {
     public void saveButtonOnAction(ActionEvent actionEvent) {
         try {
             boolean isSaved = itemCategoryBo.saveItemCategory(
-                    new ItemCategoryDto(txtFieldItemCategoryId.getText(),
+                    new ItemCategoryDto(lblItemCategory.getText(),
                             txtFieldItemCategoryName.getText()
                     ));
             if (isSaved){
                 new Alert(Alert.AlertType.INFORMATION,"Item Category Saved!").show();
                 loadItemCategoryTable();
-                clearFields();
+                generateItemCategoryId();
+                clearFields1();
             }
         } catch (SQLIntegrityConstraintViolationException ex){
             new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show();
@@ -260,10 +269,8 @@ public class ItemCategoryFormController {
             e.printStackTrace();
         }
     }
-    private void clearFields() {
-        txtFieldItemCategoryId.clear();
+    private void clearFields1() {
         txtFieldItemCategoryName.clear();
-
     }
 
     public void reloadButtonOnAction(ActionEvent actionEvent) {
@@ -300,7 +307,36 @@ public class ItemCategoryFormController {
             stage.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
-}
+        }
+    }
 
+    public void generateItemCategoryId() {
+        try {
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.openSession();
+
+            session.beginTransaction();
+
+            Query<ItemCategory> query = session.createQuery("FROM ItemCategory ORDER BY categoryId DESC");
+            query.setMaxResults(1);
+            List<ItemCategory> resultList = query.getResultList();
+
+            if (!resultList.isEmpty()) {
+                String id = resultList.get(0).getCategoryId();
+                if (!id.isEmpty() && id.matches("S\\d{3}")) {
+                    int num = Integer.parseInt(id.substring(1)) + 1;
+                    lblItemCategory.setText(String.format("S%03d", num));
+                } else {
+                    lblItemCategory.setText("S001");
+                }
+            } else {
+                lblItemCategory.setText("IC001");
+            }
+            session.getTransaction().commit();
+            session.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

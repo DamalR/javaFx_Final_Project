@@ -6,12 +6,14 @@ import bo.BoFactory;
 import bo.custom.CustomerBo;
 import bo.custom.EmployeeBo;
 import dao.util.BoType;
+import dao.util.HibernateUtil;
 import dto.CustomerDto;
 import dto.EmployeeDto;
 import dto.ItemDto;
 import dto.tm.CustomerTm;
 import dto.tm.ItemTm;
 import entity.Customer;
+import entity.Orders;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,6 +22,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
@@ -36,6 +42,8 @@ public class AddCustomerFormController {
     public Button btnUpdate;
     public Button btnReload;
     public TableView tblCustomerDetilas;
+    public Label lblCustomerId;
+    public Button btnGoToOrder;
     @FXML
     private BorderPane pane;
 
@@ -123,9 +131,10 @@ public class AddCustomerFormController {
     private CustomerBo customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
 
     public void initialize(){
+        generateCustomerId();
         colCustomerId.setCellValueFactory(new PropertyValueFactory<>("customerId"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colContactNumber.setCellValueFactory(new PropertyValueFactory<>("customerContactNumber"));
+        colContactNumber.setCellValueFactory(new PropertyValueFactory<>("contactNumber"));
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         colDelete.setCellValueFactory(new PropertyValueFactory<>("btn"));
@@ -154,20 +163,21 @@ public class AddCustomerFormController {
 
     public void addCustomerButtonOnAction(javafx.event.ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         boolean isSaved = customerBo.saveCustomer(
-                new CustomerDto(txtFieldOrderId.getText(),
+                new CustomerDto(lblCustomerId.getText(),
                         txtFieldCustomerName.getText(),
                         txtFieldCustomerContactNum.getText(),
                         txtFieldEmail.getText(),
                         txtFiledAddress.getText()
                 ));
         if (isSaved){
-            new Alert(Alert.AlertType.INFORMATION,"Item Category Saved!").show();
+            new Alert(Alert.AlertType.INFORMATION,"Customer Saved!").show();
+            generateCustomerId();
+            clearFields();
         }
-        clearFields();
+
     }
 
     private void clearFields() {
-        txtFieldOrderId.clear();
         txtFieldCustomerName.clear();
         txtFieldCustomerContactNum.clear();
         txtFieldEmail.clear();
@@ -181,7 +191,7 @@ public class AddCustomerFormController {
     public void updateButtonOnAction(ActionEvent actionEvent) {
         try {
             boolean isUpdated = customerBo.updateCustomer(
-                    new CustomerDto(txtFieldCustomerId.getText(),
+                    new CustomerDto(lblCustomerId.getText(),
                             txtFieldName.getText(),
                             txtFieldContactNumber.getText(),
                             txtFieldEmailT2.getText(),
@@ -247,5 +257,40 @@ public class AddCustomerFormController {
     public void reloadButtonOnAction(ActionEvent actionEvent) {
         loadCustomerTable();
         tblCustomerDetilas.refresh();
+    }
+
+    public void generateCustomerId() {
+        try {
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session = sessionFactory.openSession();
+
+            session.beginTransaction();
+
+            Query<Customer> query = session.createQuery("FROM Customer ORDER BY customerId DESC");
+            query.setMaxResults(1);
+            List<Customer> resultList = query.getResultList();
+
+            if (!resultList.isEmpty()) {
+                String id = resultList.get(0).getCustomerId();
+                if (!id.isEmpty() && id.matches("C\\d{3}")) {
+                    int num = Integer.parseInt(id.substring(1)) + 1;
+                    lblCustomerId.setText(String.format("C%03d", num));
+                } else {
+                    lblCustomerId.setText("C001");
+                }
+            } else {
+                lblCustomerId.setText("C001");
+            }
+            session.getTransaction().commit();
+            session.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void goToOrderButtonOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) pane.getScene().getWindow();
+        ButtonControllers.orderCaller(stage);
     }
 }

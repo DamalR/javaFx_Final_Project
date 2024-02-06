@@ -1,15 +1,20 @@
 
 Q
-java:S3740A"/Provide the parametrized type for this generic.(÷îÿÿÿÿÿ8àìŒ·Ñ1
+java:S3740C"/Provide the parametrized type for this generic.(÷îÿÿÿÿÿ8î…æÕ×1
+Q
+java:S3740J"/Provide the parametrized type for this generic.(÷îÿÿÿÿÿ8ğ…æÕ×1
 
-java:S1488B"]Immediately return this expression instead of assigning it to the temporary variable "list1".(®’ëşÿÿÿÿ8àìŒ·Ñ1
+java:S1488D"]Immediately return this expression instead of assigning it to the temporary variable "list1".(®’ëşÿÿÿÿ8ğ…æÕ×1
 g
-java:S2095""EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8ÕÆ‹·Ñ1
+java:S20959"EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8€†æÕ×1
 g
-java:S20957"EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8Ü¤•·Ñ1
+java:S2095$"EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8ÿ…æÕ×1
+L
+java:S1128"*Remove this unused import 'dto.OrdersDto'.(¯‹âÿşÿÿÿÿ8£ŸìÕ×1
 N
-java:S1128",Remove this unused import 'dto.CustomerDto'.(ÛàÀÖüÿÿÿÿ8é¤•·Ñ1
-N
-java:S1128",Remove this unused import 'entity.Employee'.(‚‘ÇÕıÿÿÿÿ8é¤•·Ñ1
+java:S1128",Remove this unused import 'entity.Employee'.(‚‘ÇÕıÿÿÿÿ8£ŸìÕ×1
 E
-java:S1128"(Remove this unused import 'entity.Item'.(ÏÂã8é¤•·Ñ1
+java:S1128	"(Remove this unused import 'entity.Item'.(ÏÂã8£ŸìÕ×1
+G
+java:S1128
+"*Remove this unused import 'entity.Orders'.(Û°ö¦8£ŸìÕ×1

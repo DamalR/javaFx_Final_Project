@@ -1,11 +1,10 @@
 package bo;
 
-import bo.custom.impl.CustomerBoImpl;
-import bo.custom.impl.EmployeeBoImpl;
-import bo.custom.impl.ItemBoImpl;
-import bo.custom.impl.ItemCategoryBoImpl;
+import bo.custom.impl.*;
 
 import dao.util.BoType;
+
+import static dao.util.DaoType.ORDERS;
 
 public class BoFactory {
     private static BoFactory boFactory;
@@ -23,6 +22,7 @@ public class BoFactory {
             case ITEM:return (T) new ItemBoImpl();
             case CUSTOMER:return (T) new CustomerBoImpl();
             case ADMIN:return (T) new CustomerBoImpl();
+            case ORDERS:return (T) new OrdersBoImpl();
 
         }
         return null;

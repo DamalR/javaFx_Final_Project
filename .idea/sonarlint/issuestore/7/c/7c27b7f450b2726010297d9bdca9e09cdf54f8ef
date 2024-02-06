@@ -1,80 +1,93 @@
 
-h	java:S112é"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8›”š×1
+h	java:S112œ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8çÂ€Õ×1
 L
-java:S3740"/Provide the parametrized type for this generic.(ì¬ƒ8”š×1
+java:S3740'"/Provide the parametrized type for this generic.(ì¬ƒ8çÂ€Õ×1
 Q
-java:S3740"/Provide the parametrized type for this generic.(ÊÚÎ¨ùÿÿÿÿ8Ÿ”š×1
+java:S3740("/Provide the parametrized type for this generic.(ÊÚÎ¨ùÿÿÿÿ8çÂ€Õ×1
 L
-java:S3740 "/Provide the parametrized type for this generic.(Å½«œ8 ”š×1
+java:S3740)"/Provide the parametrized type for this generic.(Å½«œ8çÂ€Õ×1
 L
-java:S3740!"/Provide the parametrized type for this generic.(ƒäÆ8 ”š×1
+java:S3740*"/Provide the parametrized type for this generic.(ƒäÆ8çÂ€Õ×1
 L
-java:S3740""/Provide the parametrized type for this generic.(¯ÿı°8 ”š×1
+java:S3740+"/Provide the parametrized type for this generic.(¯ÿı°8çÂ€Õ×1
 K
-java:S3740#"/Provide the parametrized type for this generic.(ÃíD8 ”š×1
+java:S3740,"/Provide the parametrized type for this generic.(ÃíD8çÂ€Õ×1
 |
-java:S1104"ZMake tabAddCustomer a static final constant or non-public and provide accessors if needed.(ÃÕóñúÿÿÿÿ8¢”š×1
+java:S1104"ZMake tabAddCustomer a static final constant or non-public and provide accessors if needed.(ÃÕóñúÿÿÿÿ8èÂ€Õ×1
 s
-java:S1104"VMake txtAddress a static final constant or non-public and provide accessors if needed.(¾ø¼8¢”š×1
+java:S1104 "VMake txtAddress a static final constant or non-public and provide accessors if needed.(¾ø¼8èÂ€Õ×1
 ~
-java:S1104"\Make txtContactNumber a static final constant or non-public and provide accessors if needed.(˜¸„Ïøÿÿÿÿ8¢”š×1
+java:S1104!"\Make txtContactNumber a static final constant or non-public and provide accessors if needed.(˜¸„Ïøÿÿÿÿ8èÂ€Õ×1
 v
-java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(õÍ¤šûÿÿÿÿ8¢”š×1
+java:S1104""TMake txtEmail a static final constant or non-public and provide accessors if needed.(õÍ¤šûÿÿÿÿ8èÂ€Õ×1
 v
-java:S1104"YMake txtCustomerId a static final constant or non-public and provide accessors if needed.(Öä÷8¢”š×1
+java:S1104#"YMake txtCustomerId a static final constant or non-public and provide accessors if needed.(Öä÷8èÂ€Õ×1
 {
-java:S1104"YMake txtFieldEmail a static final constant or non-public and provide accessors if needed.(Õüßıÿÿÿÿ8¢”š×1
+java:S1104$"YMake txtFieldEmail a static final constant or non-public and provide accessors if needed.(Õüßıÿÿÿÿ8èÂ€Õ×1
 x
-java:S1104"[Make txtFiledAddress a static final constant or non-public and provide accessors if needed.(éˆ‡­8¢”š×1
+java:S1104%"[Make txtFiledAddress a static final constant or non-public and provide accessors if needed.(éˆ‡­8èÂ€Õ×1
 y
-java:S1104"]Make tabUpdateCustomer a static final constant or non-public and provide accessors if needed.(ºÜ¶58¢”š×1
+java:S1104&"]Make tabUpdateCustomer a static final constant or non-public and provide accessors if needed.(ºÜ¶58èÂ€Õ×1
 v
-java:S1104"YMake colCustomerId a static final constant or non-public and provide accessors if needed.(ì¬ƒ8¢”š×1
+java:S1104'"YMake colCustomerId a static final constant or non-public and provide accessors if needed.(ì¬ƒ8èÂ€Õ×1
 u
-java:S1104"SMake colName a static final constant or non-public and provide accessors if needed.(ÊÚÎ¨ùÿÿÿÿ8¢”š×1
+java:S1104("SMake colName a static final constant or non-public and provide accessors if needed.(ÊÚÎ¨ùÿÿÿÿ8èÂ€Õ×1
 y
-java:S1104 "\Make colContactNumber a static final constant or non-public and provide accessors if needed.(Å½«œ8¢”š×1
+java:S1104)"\Make colContactNumber a static final constant or non-public and provide accessors if needed.(Å½«œ8èÂ€Õ×1
 q
-java:S1104!"TMake colEmail a static final constant or non-public and provide accessors if needed.(ƒäÆ8¢”š×1
+java:S1104*"TMake colEmail a static final constant or non-public and provide accessors if needed.(ƒäÆ8èÂ€Õ×1
 s
-java:S1104""VMake colAddress a static final constant or non-public and provide accessors if needed.(¯ÿı°8¢”š×1
+java:S1104+"VMake colAddress a static final constant or non-public and provide accessors if needed.(¯ÿı°8èÂ€Õ×1
 q
-java:S1104#"UMake colDelete a static final constant or non-public and provide accessors if needed.(ÃíD8¢”š×1
+java:S1104,"UMake colDelete a static final constant or non-public and provide accessors if needed.(ÃíD8èÂ€Õ×1
 
-java:S1104$"_Make txtSearchCustomerT2 a static final constant or non-public and provide accessors if needed.( ¢–ƒÿÿÿÿÿ8£”š×1
+java:S1104-"_Make txtSearchCustomerT2 a static final constant or non-public and provide accessors if needed.( ¢–ƒÿÿÿÿÿ8èÂ€Õ×1
 
-java:S1104%"dMake txtFieldSearchCustomerT2 a static final constant or non-public and provide accessors if needed.(‘ø„Ò8£”š×1
+java:S1104."dMake txtFieldSearchCustomerT2 a static final constant or non-public and provide accessors if needed.(‘ø„Ò8èÂ€Õ×1
 |
-java:S1104&"_Make btnSearchCustomerT2 a static final constant or non-public and provide accessors if needed.(ª¬ê8£”š×1
+java:S1104/"_Make btnSearchCustomerT2 a static final constant or non-public and provide accessors if needed.(ª¬ê8èÂ€Õ×1
 r
-java:S1104'"PMake pane a static final constant or non-public and provide accessors if needed.(ÃéÇ¶ûÿÿÿÿ8£”š×1
+java:S11040"PMake pane a static final constant or non-public and provide accessors if needed.(ÃéÇ¶ûÿÿÿÿ8èÂ€Õ×1
 
-java:S1104("]Make txtFieldOrderIdT1 a static final constant or non-public and provide accessors if needed.(Ë€Šºşÿÿÿÿ8£”š×1
+java:S11041"]Make txtFieldOrderIdT1 a static final constant or non-public and provide accessors if needed.(Ë€Šºşÿÿÿÿ8èÂ€Õ×1
+u
+java:S11042"XMake txtFieldDate a static final constant or non-public and provide accessors if needed.(—¸”É8èÂ€Õ×1
+ƒ
+java:S11043"aMake textFieldItemCategory a static final constant or non-public and provide accessors if needed.(É™×•üÿÿÿÿ8èÂ€Õ×1
+
+java:S11044"bMake textFieldItemCategory1 a static final constant or non-public and provide accessors if needed.(¾……Ù8èÂ€Õ×1
+x
+java:S11045"VMake lblOrderId a static final constant or non-public and provide accessors if needed.(¢–ñ¯ıÿÿÿÿ8èÂ€Õ×1
+h
+java:S2095¤"EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8†Ã€Õ×1
 ¤
-java:S1186Ù"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö´ñıÿÿÿÿ8Ä”š×1
+java:S1186ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ö´ñıÿÿÿÿ8‡Ã€Õ×1
 Ÿ
-java:S1186İ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´¬Ìà8Ä”š×1
-Ÿ
-java:S1186î"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(óªÖ³8Ä”š×1
+java:S1186¿"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(óªÖ³8‡Ã€Õ×1
 ¤
-java:S1186ò"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ëÔäèùÿÿÿÿ8Ä”š×1
+java:S1186Ã"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ëÔäèùÿÿÿÿ8‡Ã€Õ×1
 ¤
-java:S1186ö"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎÎ¥±ùÿÿÿÿ8Ä”š×1
+java:S1186Ç"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎÎ¥±ùÿÿÿÿ8‡Ã€Õ×1
 Ÿ
-java:S1186ú"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æ…¯®8Ä”š×1
+java:S1186Ë"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æ…¯®8‡Ã€Õ×1
 €
-java:S4144Å"cUpdate this method so that its implementation is not identical to "homeButtonOnAction" on line 192.(ç¸ÍP8È”š×1
+java:S4144Ö"cUpdate this method so that its implementation is not identical to "homeButtonOnAction" on line 209.(ç¸ÍP8ˆÃ€Õ×1
 U
-java:S1172À"2Remove this unused method parameter "actionEvent".(²Ñ¤·ùÿÿÿÿ8Ñ”š×1
-j	java:S100Å"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¸ÍP8Ó”š×1
+java:S1172Ñ"2Remove this unused method parameter "actionEvent".(²Ñ¤·ùÿÿÿÿ8ŠÃ€Õ×1
+j	java:S100Ö"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¸ÍP8‹Ã€Õ×1
 O
-java:S1172Å"2Remove this unused method parameter "actionEvent".(ç¸ÍP8Ô”š×1
+java:S1172Ö"2Remove this unused method parameter "actionEvent".(ç¸ÍP8‹Ã€Õ×1
 P
-java:S1172Ê"2Remove this unused method parameter "actionEvent".(Ô¢²¡8×”š×1
+java:S1172Û"2Remove this unused method parameter "actionEvent".(Ô¢²¡8ŒÃ€Õ×1
 P
-java:S1172Ï"2Remove this unused method parameter "actionEvent".(†›†ò8Ù”š×1
+java:S1172à"2Remove this unused method parameter "actionEvent".(†›†ò8ŒÃ€Õ×1
 U
-java:S1172Ô"2Remove this unused method parameter "actionEvent".(ß‡ğíşÿÿÿÿ8Ú”š×1
+java:S1172å"2Remove this unused method parameter "actionEvent".(ß‡ğíşÿÿÿÿ8ŒÃ€Õ×1
+P
+java:S1172î"2Remove this unused method parameter "actionEvent".(´¬Ìà8Ã€Õ×1
 O
-java:S1172á"2Remove this unused method parameter "actionEvent".(Ğõ%8ß”š×1
-k	java:S100ú"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ…¯®8ñ”š×1
+java:S1172”"2Remove this unused method parameter "actionEvent".(Ğõ%8Ã€Õ×1
+k	java:S100Ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ…¯®8—Ã€Õ×1
+N
+java:S1128
+",Remove this unused import 'entity.Employee'.(‚‘ÇÕıÿÿÿÿ8—Ã€Õ×1

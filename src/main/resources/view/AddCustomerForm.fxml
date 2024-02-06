@@ -74,18 +74,19 @@
                                  <children>
                                     <GridPane GridPane.rowIndex="1">
                                       <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="124.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="20.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="124.0" />
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="540.0" minWidth="10.0" prefWidth="200.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="9.0" prefWidth="9.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="9.0" prefWidth="9.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="540.0" minWidth="10.0" prefWidth="307.0" />
                                       </columnConstraints>
                                       <rowConstraints>
                                         <RowConstraints />
                                       </rowConstraints>
                                        <children>
-                                          <Text fx:id="txtSearchCustomer" strokeType="OUTSIDE" strokeWidth="0.0" text="Serach Customer :" wrappingWidth="131.53857421875" />
-                                          <TextField fx:id="txtFieldSearchCustomer" GridPane.columnIndex="1" />
-                                          <Button fx:id="btnSearchCustomer" mnemonicParsing="false" onAction="#SearchButtonOnActionT1" text="Search" GridPane.columnIndex="3" />
+                                          <Text fx:id="txtSearchCustomer" strokeType="OUTSIDE" strokeWidth="0.0" text="Serach Customer :" wrappingWidth="131.53857421875" GridPane.columnIndex="1" />
+                                          <TextField fx:id="txtFieldSearchCustomer" prefHeight="31.0" prefWidth="254.0" GridPane.columnIndex="2" />
+                                          <Button fx:id="btnSearchCustomer" mnemonicParsing="false" onAction="#SearchButtonOnActionT1" text="Search" GridPane.columnIndex="4" />
                                        </children>
                                     </GridPane>
                                     <GridPane GridPane.rowIndex="2">
@@ -116,7 +117,6 @@
                                           <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <TextField fx:id="txtFieldOrderId" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="289.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                           <Text fx:id="txtCustomerName" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                           <Text fx:id="txtAddress" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                                           <TextField fx:id="txtFieldCustomerName" GridPane.columnIndex="2" GridPane.rowIndex="3" />
@@ -127,6 +127,8 @@
                                           <TextField fx:id="txtFieldEmail" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                                           <TextField fx:id="txtFiledAddress" GridPane.columnIndex="2" GridPane.rowIndex="9" />
                                           <Button fx:id="btnAddCustomer" mnemonicParsing="false" onAction="#addCustomerButtonOnAction" text="Add Customer" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                                          <Label fx:id="lblCustomerId" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <Button fx:id="btnGoToOrder" mnemonicParsing="false" onAction="#goToOrderButtonOnAction" text="Go to Order" GridPane.columnIndex="4" GridPane.rowIndex="14" />
                                        </children>
                                     </GridPane>
                                  </children>

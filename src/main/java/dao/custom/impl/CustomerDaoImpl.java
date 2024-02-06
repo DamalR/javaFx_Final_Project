@@ -3,9 +3,11 @@ package dao.custom.impl;
 import dao.custom.CustomerDao;
 import dao.util.HibernateUtil;
 import dto.CustomerDto;
+import dto.OrdersDto;
 import entity.Customer;
 import entity.Employee;
 import entity.Item;
+import entity.Orders;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -65,6 +67,26 @@ public class CustomerDaoImpl implements CustomerDao {
         Query query = session.createQuery("FROM Customer");
         List<Customer> list1 = query.list();
         return list1;
+    }
+
+    public CustomerDto lastCustomer() {
+        Session session = HibernateUtil.getSession();
+        Query query = session.createQuery("FROM Customer ");
+        query.setMaxResults(1);
+        List<Customer> customer = query.list();
+
+        if (!customer.isEmpty()) {
+            Customer lastCustomer = customer.get(0);
+            return new CustomerDto(
+                    lastCustomer.getCustomerId(),
+                    lastCustomer.getName(),
+                    lastCustomer.getContactNumber(),
+                    lastCustomer.getEmail(),
+                    lastCustomer.getAddress()
+            );
+        }
+        return (CustomerDto) customer;
+
     }
 
 }
