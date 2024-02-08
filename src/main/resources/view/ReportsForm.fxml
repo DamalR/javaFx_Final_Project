@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsFormController">
+   <children>
+      <JFXButton fx:id="btnOrderReport" layoutX="56.0" layoutY="122.0" onAction="#orderReportButtonOnAction" text="Order Report" />
+      <JFXButton fx:id="btnCustomer" layoutX="218.0" layoutY="122.0" onAction="#customerButtonOnAction" text="Customer Report" />
+      <JFXButton fx:id="btnSalesReport" layoutX="441.0" layoutY="122.0" onAction="#salesReportButtnOnAction" text="sales Report" />
+      <JFXButton fx:id="btnback" layoutX="24.0" layoutY="36.0" onAction="#backbuttonOnAction" text="Back" />
+   </children>
+</AnchorPane>

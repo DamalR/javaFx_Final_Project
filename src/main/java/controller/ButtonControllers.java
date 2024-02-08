@@ -58,4 +58,14 @@ public class ButtonControllers {
             throw new RuntimeException(e);
         }
     }
+
+    public static void reportCaller(Stage stage) {
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(ButtonControllers.class.getResource("/view/ReportsForm.fxml"))));
+            stage.setTitle("Report Form");
+            stage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

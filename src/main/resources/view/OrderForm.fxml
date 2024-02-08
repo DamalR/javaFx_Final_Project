@@ -177,11 +177,11 @@
                                           <Button fx:id="btnAddCustomer" mnemonicParsing="false" onAction="#addCustomerButtonOnAction" text="Add Customer" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                                           <Button fx:id="btnAddItem" mnemonicParsing="false" onAction="#addItemButtonOnAction" text="ADD" GridPane.columnIndex="4" GridPane.rowIndex="9" />
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" GridPane.columnIndex="1" GridPane.rowIndex="13" />
-                                          <TextField fx:id="txtFieldDate" prefHeight="8.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="13" />
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" GridPane.columnIndex="1" GridPane.rowIndex="17" />
                                           <TextField fx:id="txtFieldEmail" GridPane.columnIndex="2" GridPane.rowIndex="17" />
                                           <TextField fx:id="textFieldItemCategory1" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                                           <Label fx:id="lblOrderId" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <Label fx:id="lblDate" prefHeight="21.0" prefWidth="74.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="13" />
                                        </children>
                                     </GridPane>
                                  </children>
@@ -215,7 +215,7 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                               </GridPane>
-                              <TableView fx:id="tblEmpDetilas" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <TableView fx:id="tblOrdersDetilas" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                 <columns>
                                   <TableColumn fx:id="colOrderIdT1" prefWidth="91.0" text="Order ID" />
                                   <TableColumn fx:id="colNameT1" prefWidth="64.0" text="Name" />

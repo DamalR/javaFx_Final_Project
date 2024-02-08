@@ -4,10 +4,13 @@ import bo.custom.OrdersBo;
 import dao.DaoFactory;
 import dao.custom.OrdersDao;
 import dao.util.DaoType;
+import dto.ItemCategoryDto;
 import dto.OrdersDto;
+import entity.ItemCategory;
 import entity.Orders;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrdersBoImpl implements OrdersBo {
@@ -40,6 +43,22 @@ public class OrdersBoImpl implements OrdersBo {
 
     @Override
     public List<OrdersDto> allOrders() throws SQLException, ClassNotFoundException {
-        return null;
+        List<Orders> entityList = ordersDao.getAll();
+        List<OrdersDto> list = new ArrayList<>();
+        for (Orders orders : entityList) {
+            list.add(new OrdersDto(
+                    orders.getOrderId(),
+                    orders.getCustName(),
+                    orders.getCustContactNum(),
+                    orders.getItemCategoryName(),
+                    orders.getItemName(),
+                    orders.getFault(),
+                    orders.getDate(),
+                    orders.getDescription(),
+                    orders.getEmail(),
+                    orders.getStatus()
+            ));
+        }
+        return list;
     }
 }

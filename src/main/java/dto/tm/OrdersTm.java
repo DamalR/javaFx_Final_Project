@@ -1,5 +1,6 @@
 package dto.tm;
 
+import javafx.scene.control.Button;
 import lombok.*;
 
 @AllArgsConstructor
@@ -13,4 +14,5 @@ public class OrdersTm {
     private String itemCategoryName;
     private String itemName;
     private String fault;
+    private Button btn;
 }

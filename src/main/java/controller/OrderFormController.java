@@ -6,9 +6,15 @@ import bo.custom.OrdersBo;
 import com.jfoenix.controls.JFXTextField;
 import dao.util.BoType;
 import dao.util.HibernateUtil;
+import dto.ItemCategoryDto;
 import dto.OrdersDto;
+import dto.tm.ItemCategoryTm;
+import dto.tm.ItemCategoryTm2;
+import dto.tm.OrdersTm;
 import entity.Employee;
 import entity.Orders;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -23,6 +29,8 @@ import org.hibernate.query.Query;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -51,6 +59,8 @@ public class OrderFormController {
     public JFXTextField textFieldItemCategory;
     public TextField textFieldItemCategory1;
     public Label lblOrderId;
+    public Label lblDate;
+    public TableView tblOrdersDetilas;
     @FXML
     private BorderPane pane2;
 
@@ -203,7 +213,18 @@ public class OrderFormController {
 
     public void initialize(){
         generateOrderId();
+        loadDateAndTime();
+//        loadOrders();
+
     }
+    Date date;
+    private void loadDateAndTime() {
+        date = new Date();
+        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+        lblDate.setText(f.format(date));
+    }
+
+
 
     private OrdersBo ordersBo = BoFactory.getInstance().getBo(BoType.ORDERS);
     public void homeButtonOnAction(javafx.event.ActionEvent actionEvent) {
@@ -244,7 +265,7 @@ public class OrderFormController {
                             textFieldItemCategory1.getText(),
                             txtFieldItemName.getText(),
                             txtFiledFault.getText(),
-                            txtFieldDate.getText(),
+                            lblDate.getText(),
                             txtFieldDescription.getText(),
                             txtFieldEmail.getText(),
                             "Pending"
@@ -271,6 +292,34 @@ public class OrderFormController {
         txtFieldDescription.clear();
         txtFieldEmail.clear();
 
+    }
+
+    private void loadOrders() {
+        ObservableList<OrdersTm> tmList = FXCollections.observableArrayList();
+
+        try {
+            List<OrdersDto> dtoList = ordersBo.allOrders();
+
+            for (OrdersDto dto : dtoList) {
+                Button btn = new Button("Delete");
+                OrdersTm c = new OrdersTm(
+                        dto.getOrderId(),
+                        dto.getCustName(),
+                        dto.getItemCategoryName(),
+                        dto.getItemName(),
+                        dto.getFault(),
+                        btn
+                );
+//                btn.setOnAction(actionEvent -> deleteOrder(c.getCategoryId()));
+                tmList.add(c);
+            }
+            tblOrdersDetilas.setItems(tmList);
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error loading customer table", e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void addCustomerButtonOnAction(javafx.event.ActionEvent actionEvent) {
